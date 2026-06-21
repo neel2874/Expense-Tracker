@@ -1,0 +1,333 @@
+/* Auth Screen Structural Context Layout Styles */
+.auth-body-layout {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #e0fcf9 0%, #def5f8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.auth-window-container {
+    width: 1000px;
+    min-height: 560px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(100, 150, 170, 0.15);
+    display: flex;
+    overflow: hidden;
+    margin: 20px;
+}
+
+/* Form Action Side Control Configurations */
+.auth-form-side {
+    flex: 1.1;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.auth-card-view {
+    width: 100%;
+    animation: fadeInSmooth 0.4s ease-out;
+}
+
+@keyframes fadeInSmooth {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-brand-title {
+    font-family: 'pacifico', brush script mt, serif;
+    font-size: 90px;
+    color: #14b8a6;
+    margin: 0 0 35px 0;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+/* Field Row Inputs Components Custom Setup */
+.auth-input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.auth-field-row {
+    position: relative;
+    width: 100%;
+}
+
+.auth-field-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+.auth-field-row input {
+    width: 100%;
+    padding: 14px 16px 14px 46px;
+    border: none;
+    border-radius: 14px;
+    background-color: #f1f5f9;
+    font-size: 0.95rem;
+    color: #334155;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.auth-field-row input:focus {
+    outline: none;
+    background-color: #e2e8f0;
+}
+
+.auth-toggle-visibility {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+/* Utilities Links and Separation Decorators */
+.auth-utilities {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -4px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.auth-accent-link {
+    color: #06b6d4;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.auth-accent-link.bold {
+    font-weight: 600;
+    color: #14b8a6;
+}
+
+.auth-accent-link:hover {
+    text-decoration: underline;
+}
+
+.auth-primary-action {
+    background: linear-gradient(to right, #0dd2ca 0%, #0bc2dd 100%);
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(13, 210, 202, 0.25);
+    transition: transform 0.1s ease;
+}
+
+.auth-primary-action:active {
+    transform: scale(0.98);
+}
+
+/* Horizontal Decorative Text Splitter */
+.auth-divider {
+    text-align: center;
+    position: relative;
+    margin: 24px 0;
+}
+
+.auth-divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: #e2e8f0;
+    z-index: 1;
+}
+
+.auth-divider span {
+    background-color: #ffffff;
+    padding: 0 12px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Social Buttons Row Grid */
+.auth-social-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.social-pill-btn {
+    width: 52px;
+    height: 42px;
+    background-color: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.15rem;
+    color: #334155;
+    transition: background-color 0.15s ease;
+}
+
+.social-pill-btn:hover {
+    background-color: #f1f5f9;
+}
+
+.social-pill-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+.auth-footer-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* RIGHT GRAPHICAL ARTWORK DESIGN */
+.auth-graphics-side {
+    flex: 0.9;
+    position: relative;
+    background: url('art.png'), linear-gradient(135deg, #a78bfa 0%, #2e9c67 50%, #260ec3 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.graphics-artistic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.25) 15%, transparent 16%),
+        radial-gradient(rgba(255, 255, 255, 0.15) 15%, transparent 16%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    opacity: 0.4;
+}
+
+.graphics-brand-tagline {
+    position: relative;
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptive scaling rules for compact screens */
+@media (max-width: 900px) {
+    .auth-graphics-side {
+        display: none;
+    }
+
+    .auth-window-container {
+        max-width: 500px;
+        height: auto;
+        min-height: auto;
+    }
+
+    .auth-form-side {
+        padding: 40px 30px;
+    }
+}
+
+/* Adaptive scaling for small mobile screens */
+@media (max-width: 480px) {
+    .auth-body-layout {
+        padding: 12px;
+        align-items: flex-start;
+        padding-top: 24px;
+    }
+
+    .auth-window-container {
+        margin: 0;
+        border-radius: 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .auth-form-side {
+        padding: 28px 20px;
+    }
+
+    .auth-brand-title {
+        font-size: 48px;
+        margin: 0 0 24px 0;
+    }
+
+    .auth-input-form {
+        gap: 12px;
+    }
+
+    .auth-field-row input {
+        padding: 12px 14px 12px 42px;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+
+    .auth-primary-action {
+        padding: 12px;
+        font-size: 0.95rem;
+        border-radius: 12px;
+    }
+
+    .auth-divider {
+        margin: 18px 0;
+    }
+
+    .auth-social-row {
+        gap: 12px;
+        margin-bottom: 18px;
+    }
+
+    .social-pill-btn {
+        width: 46px;
+        height: 38px;
+        border-radius: 16px;
+    }
+
+    .auth-footer-text {
+        font-size: 0.8rem;
+    }
+}

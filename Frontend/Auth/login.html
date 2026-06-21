@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Expense Tracker</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Auth/auth.css">
+</head>
+
+<body class="auth-body-layout">
+
+    <div class="auth-window-container">
+
+        <div class="auth-form-side">
+            <div class="auth-card-view active">
+                <h1 class="auth-brand-title">Welcome!</h1>
+
+                <form id="submitLoginForm" class="auth-input-form">
+                    <div class="auth-field-row">
+                        <i class="far fa-envelope auth-field-icon"></i>
+                        <input type="email" placeholder="Email address" required>
+                    </div>
+
+                    <div class="auth-field-row">
+                        <i class="fas fa-lock auth-field-icon"></i>
+                        <input type="password" placeholder="Password" id="loginPasswordInput" required>
+                        <i class="far fa-eye auth-toggle-visibility"
+                            onclick="togglePasswordVisibility('loginPasswordInput')"></i>
+                    </div>
+
+                    <div class="auth-utilities">
+                        <a href="#" class="auth-accent-link text-right">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="auth-primary-action">Log In</button>
+                </form>
+
+                <div class="auth-divider"><span>or continue with</span></div>
+
+                <div class="auth-social-row">
+                    <button class="social-pill-btn"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                            alt="Google"></button>
+                    <button class="social-pill-btn"><i class="fab fa-apple"></i></button>
+                    <button class="social-pill-btn"><i class="fab fa-facebook-f" style="color: #1877f2;"></i></button>
+                </div>
+
+                <p class="auth-footer-text">Don't have an account? <a href="/register"
+                        class="auth-accent-link bold">Register</a></p>
+            </div>
+        </div>
+
+        <div class="auth-graphics-side">
+            <div class="graphics-artistic-overlay"></div>
+            <div class="graphics-brand-tagline">
+                <a href="../landing page/landing.html" style="color: #f6f6f6;">TRACK · SAVE · GROW</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/Auth/auth.js"></script>
+</body>
+
+</html>
