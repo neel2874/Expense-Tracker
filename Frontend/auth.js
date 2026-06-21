@@ -29,7 +29,7 @@ function initValidationCheck() {
                 });
                 const resData = await response.json();
                 if (response.ok) {
-                    window.location.href = '/';
+                    window.location.href = 'dashboard.html';
                 } else {
                     alert(resData.message || "Registration failed!");
                 }
@@ -54,7 +54,7 @@ function initValidationCheck() {
                 });
                 const resData = await response.json();
                 if (response.ok) {
-                    window.location.href = '/';
+                    window.location.href = 'dashboard.html';
                 } else {
                     alert(resData.message || "Login failed!");
                 }

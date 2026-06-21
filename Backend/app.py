@@ -10,34 +10,34 @@ db = ExpenseTrackerDB()
 @app.route('/')
 def home():
     if 'user_id' not in session:
-        return render_template('landing page/landing.html')
-    return render_template('index.html')
+        return render_template('index.html')
+    return render_template('dashboard.html')
 
 # Explicit landing page route
 @app.route('/landing')
 def landing():
-    return render_template('landing page/landing.html')
+    return render_template('index.html')
 
 # Dashboard route for logged-in users
 @app.route('/dashboard')
 def dashboard():
     if 'user_id' not in session:
         return redirect(url_for('login'))
-    return render_template('index.html')
+    return render_template('dashboard.html')
 
 # Route to serve the login page
 @app.route('/login')
 def login():
     if 'user_id' in session:
         return redirect(url_for('home'))
-    return render_template('Auth/login.html')
+    return render_template('login.html')
 
 # Route to serve the register page
 @app.route('/register')
 def register():
     if 'user_id' in session:
         return redirect(url_for('home'))
-    return render_template('Auth/register.html')
+    return render_template('register.html')
 
 # API Route: Register a new user
 @app.route('/api/register', methods=['POST'])

@@ -34,7 +34,7 @@ async function fetchDashboardData() {
         if (!response.ok) {
             if (response.status === 401) {
                 // Redirect to login if unauthorized
-                window.location.href = '/login';
+                window.location.href = 'login.html';
                 return;
             }
             throw new Error("Failed to fetch data");
